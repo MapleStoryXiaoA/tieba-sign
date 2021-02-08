@@ -118,7 +118,7 @@ public class SignService {
                                     if (todoList.containsKey(kw)) {
                                         int doneTimes = todoList.get(kw) + 1;
                                         if (doneTimes >= flag) {
-                                            log.warn("{}吧签到失败{}次,不在继续签到", kw, flag);
+                                            log.warn("{}吧签到失败{}次,不再继续签到", kw, flag);
                                             todoList.remove(kw);
                                             failList.add(kw);
                                         } else {
@@ -131,7 +131,7 @@ public class SignService {
                     );
                 }
 
-                Thread.sleep(1000);//签太快百度会报失败
+                Thread.sleep(1000*10);//签太快百度会报失败
             }
         } catch (Exception e) {
             log.error("签到出错", e);
