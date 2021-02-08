@@ -12,8 +12,6 @@ jobs:
     steps:
       # 拉取源码
       - uses: actions/checkout@v2
-        with:
-        ref: master
 
       # 装置JDK环境
       - name: Set up JDK 1.8
