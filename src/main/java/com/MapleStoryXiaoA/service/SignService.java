@@ -68,9 +68,6 @@ public class SignService {
                 if (0 == (((JsonObject) array).getInteger("is_sign"))) {
                     // 将未签到的贴吧加入到 follow 中，待签到
                     todoList.put(((JsonObject) array).getString("forum_name"), 0);
-                    if (todoList.size() > 2) {
-                        break;
-                    }
                 } else {
                     // 将已经成功签到的贴吧，加入到 success
                     successList.add(((JsonObject) array).getString("forum_name"));

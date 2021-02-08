@@ -19,7 +19,7 @@ public class TieBaSignApplication {
         SignService signService = new SignService();
         signService.start();
 
-//        System.exit(0);
+        System.exit(0);
     }
 
 }
