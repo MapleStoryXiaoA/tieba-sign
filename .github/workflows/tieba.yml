@@ -1,8 +1,9 @@
 name: tieba-sign
 
 on:
+  push:
   schedule:
-    - cron:  '50 11 * * *'
+    - cron:  '20 7 * * *'
 
 
 
@@ -33,7 +34,6 @@ jobs:
 
       - name: Start application
         env:
-          TZ: Asia/Shanghai
           BDUSS: ${{ secrets.BDUSS }}
           DDKEY: ${{ secrets.DDKEY }}
         run: |
