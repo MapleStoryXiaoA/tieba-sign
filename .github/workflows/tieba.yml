@@ -2,11 +2,12 @@ name: tieba-sign
 
 on:
   schedule:
-    - cron:  '*/15 * * * *'
+    - cron:  '50 11 * * *'
+
 
 
 jobs:
-  one:
+  start:
     runs-on: ubuntu-latest
 
     steps:
@@ -32,6 +33,7 @@ jobs:
 
       - name: Start application
         env:
+          TZ: Asia/Shanghai
           BDUSS: ${{ secrets.BDUSS }}
           DDKEY: ${{ secrets.DDKEY }}
         run: |
