@@ -2,7 +2,7 @@ name: tieba-sign
 
 on:
   schedule:
-    - cron: '30 12 * * *'
+    - cron:  '*/15 * * * *'
     branches:
       - master
 
