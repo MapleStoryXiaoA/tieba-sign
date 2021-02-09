@@ -2,10 +2,9 @@ name: tieba-sign
 
 on:
   push:
+    branches: [ master ]
   schedule:
-    - cron:  '20 7 * * *'
-
-
+    - cron: '0 */2 * * *'
 
 jobs:
   start:
